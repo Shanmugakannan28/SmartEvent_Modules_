@@ -1,0 +1,6 @@
+Quick smoke tests after starting uvicorn:
+GET http://127.0.0.1:8000/events
+POST http://127.0.0.1:8000/coupons/validate JSON: {"coupon_code":"WELCOME10","amount":799}
+POST http://127.0.0.1:8000/checkout JSON: {"user_id":1,"event_id":1,"quantity":2,"payment_method":"UPI","coupon_code":"WELCOME10"}
+To simulate failure, add "simulate_failure": true.
+GET /docs for all endpoints.
